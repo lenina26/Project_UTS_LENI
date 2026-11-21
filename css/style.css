@@ -1,0 +1,1523 @@
+:root {
+  --blush: #F6CAD5;
+  --rose: #D4748C;
+  --sage: #9CBB90;
+  --mint: #CFE1C2;
+  --cream: #FFF6F0;
+  --brown: #4A3A36;
+  --shadow: 0 12px 30px rgba(212, 116, 140, 0.22);
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: var(--cream);
+  color: var(--brown);
+  font: 400 15px/1.7 Poppins, sans-serif;
+  overflow-x: hidden;
+}
+
+h1,
+h2,
+h3 {
+  font-family: 'Cormorant Garamond', Georgia, serif;
+  line-height: 1.15;
+}
+
+h1 {
+  font-size: clamp(2.4rem, 6vw, 4rem);
+  margin: 0.5rem 0 1rem;
+}
+
+h1 em {
+  color: var(--rose);
+  font-style: italic;
+}
+
+a {
+  color: inherit;
+}
+
+img,
+svg {
+  display: block;
+  max-width: 100%;
+}
+
+
+.leni_wrap {
+  width: min(1120px, 92%);
+  margin: auto;
+}
+
+.leni_sec {
+  padding: 64px 0;
+}
+
+.leni_band {
+  padding: 64px 0;
+  background: var(--blush);
+}
+
+.leni_green {
+  background: linear-gradient(135deg, #CFE1C2, #B5D3A4);
+}
+
+.leni_center {
+  text-align: center;
+}
+
+.leni_narrow {
+  max-width: 760px;
+}
+
+.leni_split {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  gap: 48px;
+}
+
+.leni_split p + .leni_btn {
+  margin-top: 18px;
+}
+
+.leni_row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-top: 1.4rem;
+}
+
+.leni_row-center {
+  justify-content: center;
+}
+
+.leni_grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(230px, 1fr));
+  gap: 24px;
+}
+
+.leni_cols {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+}
+
+.leni_c2 {
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
+}
+
+.leni_c3 {
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.leni_tint-rose {
+  --tint: #F6B8C8;
+}
+
+.leni_tint-blush {
+  --tint: #F6CAD5;
+}
+
+.leni_tint-leaf {
+  --tint: #BFD8AF;
+}
+
+.leni_tint-mint {
+  --tint: #CFE1C2;
+}
+
+.leni_tint-pale {
+  --tint: #E4EFD9;
+}
+
+.leni_pt-0 {
+  padding-top: 0;
+}
+
+.leni_mt-10 {
+  margin-top: 10px;
+}
+
+.leni_mt-12 {
+  margin-top: 12px;
+}
+
+.leni_mt-14 {
+  margin-top: 14px;
+}
+
+.leni_mt-24 {
+  margin-top: 24px;
+}
+
+.leni_mt-28 {
+  margin-top: 28px;
+}
+
+.leni_mt-50 {
+  margin-top: 50px;
+}
+
+.leni_mt-56 {
+  margin-top: 56px;
+}
+
+#leni_main > section {
+  scroll-margin-top: 112px;
+}
+
+
+.leni_tag {
+  display: inline-block;
+  padding: 4px 14px;
+  border-radius: 99px;
+  background: #B9D3A9;
+  color: var(--brown);
+  font-size: 0.78rem;
+  font-weight: 500;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.leni_band .leni_tag {
+  display: table;
+  margin: 0 auto 6px;
+}
+
+.leni_h2 {
+  font-size: clamp(1.7rem, 4vw, 2.5rem);
+  margin-bottom: 1.2rem;
+}
+
+.leni_h2::after {
+  content: "";
+  display: block;
+  width: 60px;
+  height: 4px;
+  margin-top: 8px;
+  border-radius: 4px;
+  background: linear-gradient(90deg, var(--rose), var(--sage));
+}
+
+.leni_center .leni_h2::after {
+  margin: 8px auto 0;
+}
+
+
+.leni_btn {
+  display: inline-block;
+  padding: 12px 26px;
+  border: 0;
+  border-radius: 99px;
+  background: linear-gradient(135deg, #E0869C, #C85F7D);
+  box-shadow: var(--shadow);
+  color: #fff;
+  font: 500 0.9rem Poppins, sans-serif;
+  text-decoration: none;
+  cursor: pointer;
+  transition: 0.25s;
+}
+
+.leni_btn:hover {
+  background: var(--brown);
+  transform: translateY(-2px);
+}
+
+.leni_ghost {
+  border: 1.5px solid var(--rose);
+  background: transparent;
+  box-shadow: none;
+  color: var(--rose);
+}
+
+.leni_ghost:hover {
+  background: var(--rose);
+  color: #fff;
+}
+
+.leni_sm {
+  padding: 8px 18px;
+  font-size: 0.8rem;
+}
+
+
+input,
+select,
+textarea {
+  width: 100%;
+  padding: 11px 16px;
+  border: 1.5px solid var(--mint);
+  border-radius: 16px;
+  background: #fff;
+  color: inherit;
+  font: inherit;
+}
+
+input:focus,
+select:focus,
+textarea:focus {
+  outline: 0;
+  border-color: var(--rose);
+}
+
+.leni_tools {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-bottom: 28px;
+}
+
+.leni_tools input {
+  flex: 2;
+  width: auto;
+  min-width: 200px;
+}
+
+.leni_tools select {
+  flex: 1;
+  width: auto;
+  min-width: 160px;
+}
+
+.leni_inline {
+  display: flex;
+  gap: 10px;
+  max-width: 460px;
+  margin: 18px auto 0;
+}
+
+.leni_contact-form label {
+  display: block;
+  margin-top: 12px;
+  font-size: 0.85rem;
+  font-weight: 500;
+}
+
+.leni_contact-form .leni_btn {
+  margin-top: 18px;
+}
+
+.leni_err {
+  display: block;
+  min-height: 1em;
+  color: #C0506A;
+  font-size: 0.78rem;
+}
+
+.leni_okmsg {
+  margin-top: 14px;
+  padding: 12px;
+  border-radius: 14px;
+  background: var(--mint);
+}
+
+
+.leni_box {
+  padding: 24px;
+  border-top: 4px solid var(--rose);
+  border-radius: 22px;
+  background: #fff;
+  box-shadow: var(--shadow);
+  transition: 0.3s;
+}
+
+.leni_box:nth-child(even) {
+  border-top-color: var(--sage);
+}
+
+.leni_box:hover {
+  transform: translateY(-4px);
+}
+
+.leni_cat {
+  color: #C25675;
+  font-size: 0.72rem;
+  font-weight: 500;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.leni_ing {
+  color: #7A6862;
+  font-size: 0.76rem;
+}
+
+.leni_stars {
+  color: #E8A33D;
+  font-size: 0.8rem;
+}
+
+.leni_stars small {
+  color: var(--brown);
+}
+
+
+.leni_announce {
+  padding: 7px 10px;
+  background: linear-gradient(90deg, #D4748C, #9CBB90);
+  color: #fff;
+  font-size: 0.76rem;
+  letter-spacing: 0.06em;
+  text-align: center;
+}
+
+#leni_header {
+  position: sticky;
+  top: 0;
+  z-index: 50;
+  background: rgba(255, 249, 244, 0.92);
+  box-shadow: 0 2px 14px rgba(81, 67, 63, 0.06);
+  backdrop-filter: blur(8px);
+}
+
+.leni_bar {
+  display: grid;
+  grid-template-columns: 1fr auto 1fr;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  height: 72px;
+}
+
+.leni_logo {
+  color: var(--rose);
+  font: 700 2.2rem 'Cormorant Garamond', Georgia, serif;
+  letter-spacing: 0.08em;
+  text-decoration: none;
+}
+
+.leni_bar .leni_logo {
+  grid-column: 2;
+  grid-row: 1;
+}
+
+.leni_icons {
+  display: flex;
+  gap: 6px;
+}
+
+.leni_bar .leni_icons {
+  grid-column: 3;
+  grid-row: 1;
+  justify-self: end;
+}
+
+.leni_icon,
+.leni_burger {
+  position: relative;
+  width: 42px;
+  height: 42px;
+  border: 0;
+  border-radius: 50%;
+  background: var(--blush);
+  font-size: 1rem;
+  cursor: pointer;
+  transition: 0.25s;
+}
+
+.leni_icon:hover {
+  background: var(--sage);
+  transform: translateY(-2px);
+}
+
+.leni_icon b {
+  position: absolute;
+  top: -4px;
+  right: -4px;
+  min-width: 18px;
+  height: 18px;
+  border-radius: 99px;
+  background: var(--rose);
+  color: #fff;
+  font-size: 0.65rem;
+  line-height: 18px;
+}
+
+.leni_burger {
+  display: none;
+  grid-column: 1;
+  grid-row: 1;
+  justify-self: start;
+}
+
+.leni_navbar {
+  display: flex;
+  gap: 22px;
+}
+
+.leni_navbar a {
+  padding: 4px 0;
+  border-bottom: 2px solid transparent;
+  font-size: 0.9rem;
+  text-decoration: none;
+  transition: 0.25s;
+}
+
+.leni_navbar a:hover,
+.leni_navbar a.leni_active {
+  border-color: var(--rose);
+  color: var(--rose);
+}
+
+.leni_hero-section {
+  padding: 70px 0;
+  background:
+    radial-gradient(circle at 88% 15%, #E3EFD6, transparent 45%),
+    linear-gradient(135deg, #F4B3C4, #F6CAD5 50%, #BFD8AF);
+}
+
+.leni_stats {
+  display: flex;
+  gap: 30px;
+  margin-top: 30px;
+}
+
+.leni_stats b {
+  display: block;
+  color: var(--rose);
+  font: 600 2rem 'Cormorant Garamond', serif;
+  line-height: 1;
+}
+
+.leni_stats span {
+  font-size: 0.75rem;
+  letter-spacing: 0.06em;
+}
+
+
+.leni_archwrap {
+  position: relative;
+  width: 100%;
+  max-width: 400px;
+  margin: auto;
+}
+
+.leni_archwrap-sm {
+  max-width: 300px;
+  margin: 26px 0 0;
+}
+
+.leni_arch {
+  overflow: hidden;
+  border: 8px solid #fff;
+  border-radius: 999px 999px 32px 32px;
+  box-shadow: var(--shadow);
+  animation: leni_float 5s ease-in-out infinite;
+}
+
+.leni_badge {
+  position: absolute;
+  z-index: 3;
+  padding: 8px 16px;
+  border-radius: 99px;
+  background: #fff;
+  box-shadow: var(--shadow);
+  font-size: 0.78rem;
+  font-weight: 500;
+  animation: leni_float 5s ease-in-out infinite;
+}
+
+.leni_b1 {
+  bottom: 70px;
+  left: -18px;
+}
+
+.leni_b2 {
+  top: 70px;
+  right: -14px;
+  animation-delay: 1s;
+}
+
+@keyframes leni_float {
+  50% {
+    transform: translateY(-8px);
+  }
+}
+
+
+.leni_marquee {
+  padding: 13px 0;
+  overflow: hidden;
+  background: var(--brown);
+  color: #F6CAD5;
+  font-size: 0.78rem;
+  letter-spacing: 0.25em;
+  text-transform: uppercase;
+  white-space: nowrap;
+}
+
+.leni_track {
+  display: inline-block;
+  animation: leni_scroll 30s linear infinite;
+}
+
+@keyframes leni_scroll {
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+
+.leni_tiles {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 18px;
+}
+
+.leni_tile {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  min-height: 230px;
+  padding: 24px;
+  overflow: hidden;
+  border-radius: 28px;
+  background: var(--tint);
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+.leni_tile::after {
+  content: "";
+  position: absolute;
+  top: -40px;
+  right: -40px;
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.4);
+}
+
+.leni_tile:hover {
+  box-shadow: var(--shadow);
+  transform: translateY(-6px);
+}
+
+.leni_tile h3 {
+  font-size: 2.4rem;
+}
+
+.leni_tile small {
+  position: absolute;
+  top: 22px;
+  left: 24px;
+  font-size: 0.68rem;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+}
+
+.leni_tile span {
+  margin-top: 10px;
+  color: #A8466A;
+  font-size: 0.82rem;
+  font-weight: 500;
+}
+
+.leni_frame {
+  padding: 40px;
+  border-radius: 34px;
+  background: #FFFBF8;
+  box-shadow: 0 0 0 8px #fff, 0 0 0 10px rgba(212, 116, 140, 0.35);
+}
+
+.leni_ritual {
+  margin: 18px 0 24px;
+  list-style: none;
+}
+
+.leni_ritual li {
+  padding: 10px 0;
+  border-bottom: 1px dashed var(--rose);
+  font: 600 1.3rem 'Cormorant Garamond', serif;
+}
+
+.leni_ritual b {
+  margin-right: 10px;
+  color: var(--rose);
+}
+
+.leni_ritual small {
+  margin-left: 8px;
+  font: 400 0.8rem Poppins, sans-serif;
+}
+
+
+.leni_ugc {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 14px;
+}
+
+.leni_ugc a {
+  overflow: hidden;
+  border-radius: 22px;
+  box-shadow: var(--shadow);
+  transition: 0.3s;
+}
+
+.leni_ugc a:hover {
+  transform: scale(1.03) rotate(-1deg);
+}
+
+
+.leni_pagehead {
+  position: relative;
+  padding: 72px 0;
+  overflow: hidden;
+  background: linear-gradient(135deg, #BFD8AF, #F6CAD5);
+  text-align: center;
+}
+
+.leni_pagehead::before {
+  content: "";
+  position: absolute;
+  top: -120px;
+  left: -90px;
+  width: 320px;
+  height: 320px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.4);
+}
+
+.leni_pagehead::after {
+  content: "";
+  position: absolute;
+  right: -50px;
+  bottom: -90px;
+  width: 240px;
+  height: 240px;
+  border-radius: 50% 50% 50% 0;
+  background: rgba(212, 116, 140, 0.25);
+  transform: rotate(30deg);
+}
+
+.leni_pagehead .leni_wrap {
+  position: relative;
+  z-index: 1;
+}
+
+.leni_pagehead h2 {
+  font-size: clamp(2.4rem, 6vw, 4rem);
+  margin: 0.5rem 0 1rem;
+}
+
+.leni_pagehead h2 em {
+  color: var(--rose);
+  font-style: italic;
+}
+
+.leni_pagehead p {
+  max-width: 520px;
+  margin: 0 auto;
+}
+
+.leni_quote {
+  max-width: 800px;
+  margin: 12px auto 0;
+  color: var(--brown);
+  font: 600 clamp(1.8rem, 5vw, 3.2rem) 'Cormorant Garamond', serif;
+  text-align: center;
+}
+
+.leni_vm {
+  padding: 40px;
+  border-radius: 32px;
+  background: var(--tint);
+  box-shadow: var(--shadow);
+}
+
+.leni_vt {
+  position: relative;
+  min-height: 170px;
+  padding: 26px;
+  overflow: hidden;
+  border-radius: 26px;
+  background: var(--tint);
+}
+
+.leni_vt::after {
+  content: "";
+  position: absolute;
+  top: -30px;
+  right: -30px;
+  width: 110px;
+  height: 110px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.4);
+}
+
+.leni_vt small {
+  letter-spacing: 0.14em;
+}
+
+.leni_vt h3 {
+  margin: 8px 0;
+  font-size: 2.2rem;
+}
+
+
+.leni_info {
+  position: relative;
+  z-index: 2;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 18px;
+  margin-top: -44px;
+}
+
+.leni_info .leni_box {
+  text-align: center;
+}
+
+.leni_info b {
+  display: block;
+  font-size: 1.8rem;
+}
+
+.leni_info a {
+  color: var(--rose);
+}
+
+.leni_product-card {
+  position: relative;
+  padding: 14px 14px 20px;
+  border: 1px solid rgba(212, 116, 140, 0.18);
+  border-radius: 24px;
+  background: #fff;
+  box-shadow: var(--shadow);
+  text-align: center;
+  transition: 0.3s;
+}
+
+.leni_product-card:hover {
+  transform: translateY(-6px);
+}
+
+.leni_product-card h3 {
+  margin: 2px 0;
+  font-size: 1.25rem;
+}
+
+.leni_product-card h3 a {
+  text-decoration: none;
+}
+
+.leni_price {
+  margin: 4px 0 12px;
+  font-size: 0.88rem;
+  font-weight: 500;
+}
+
+.leni_badge-tag {
+  position: absolute;
+  top: 22px;
+  left: 22px;
+  z-index: 2;
+  padding: 3px 11px;
+  border-radius: 99px;
+  background: var(--rose);
+  color: #fff;
+  font-size: 0.62rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+.leni_heart {
+  position: absolute;
+  top: 22px;
+  right: 22px;
+  z-index: 2;
+  width: 36px;
+  height: 36px;
+  border: 0;
+  border-radius: 50%;
+  background: #fff;
+  box-shadow: var(--shadow);
+  color: #CCC;
+  font-size: 1.1rem;
+  cursor: pointer;
+  transition: 0.25s;
+}
+
+.leni_heart.leni_on {
+  color: var(--rose);
+  transform: scale(1.1);
+}
+
+.leni_heart-inline {
+  position: static;
+}
+
+.leni_ph {
+  position: relative;
+  display: block;
+  overflow: hidden;
+  aspect-ratio: 3 / 4;
+  border-radius: inherit;
+}
+
+.leni_ph svg,
+.leni_ph img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.leni_ph img {
+  object-fit: cover;
+  object-position: center;
+}
+
+.leni_product-card .leni_ph {
+  margin-bottom: 10px;
+  border-radius: 18px;
+}
+
+.leni_thumb {
+  flex: none;
+  width: 86px;
+  margin-left: auto;
+  overflow: hidden;
+  border-radius: 16px;
+}
+
+.leni_thumb .leni_ph,
+.leni_arch .leni_ph {
+  border-radius: 0;
+}
+
+
+.leni_crumb {
+  margin-bottom: 22px;
+  font-size: 0.8rem;
+}
+
+.leni_crumb a {
+  color: var(--rose);
+  text-decoration: none;
+}
+
+.leni_dt h3 {
+  margin-top: 18px;
+}
+
+.leni_dt ul {
+  padding-left: 20px;
+}
+
+.leni_dname {
+  font-size: 2.4rem;
+}
+
+.leni_dprice {
+  margin: 4px 0 10px;
+  color: var(--rose);
+  font-size: 2rem;
+}
+
+.leni_meta {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin: 12px 0;
+}
+
+.leni_meta input {
+  width: 80px;
+}
+
+.leni_acc {
+  padding: 12px 0;
+  border-bottom: 1px solid rgba(212, 116, 140, 0.3);
+}
+
+.leni_acc summary {
+  font: 600 1.3rem 'Cormorant Garamond', serif;
+  list-style: none;
+  cursor: pointer;
+}
+
+.leni_acc summary::after {
+  content: "+";
+  float: right;
+  color: var(--rose);
+}
+
+.leni_acc[open] summary::after {
+  content: "−";
+}
+
+.leni_acc p,
+.leni_acc ul {
+  margin-top: 8px;
+  font-size: 0.9rem;
+}
+
+.leni_trust {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
+  margin-top: 22px;
+  font-size: 0.74rem;
+  text-align: center;
+}
+
+.leni_trust span {
+  padding: 10px 6px;
+  border-radius: 16px;
+  background: #fff;
+  box-shadow: var(--shadow);
+}
+
+
+.leni_flow {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px;
+  margin-bottom: 32px;
+}
+
+.leni_flow span {
+  padding: 8px 20px;
+  border-radius: 99px;
+  background: #fff;
+  box-shadow: var(--shadow);
+  font-size: 0.85rem;
+  font-weight: 500;
+}
+
+.leni_panel {
+  padding: 32px;
+  border-radius: 34px;
+}
+
+.leni_morning {
+  background: linear-gradient(160deg, #F6B8C8, #FBE0D8);
+}
+
+.leni_night {
+  background: linear-gradient(160deg, #B5D3A4, #DDEBD2);
+}
+
+.leni_step {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin-bottom: 14px;
+  padding: 18px;
+  border-radius: 20px;
+  background: #fff;
+  box-shadow: var(--shadow);
+}
+
+.leni_step span {
+  display: grid;
+  flex: none;
+  place-items: center;
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  background: var(--rose);
+  color: #fff;
+  font-weight: 500;
+}
+
+.leni_step a {
+  color: var(--rose);
+  font-size: 0.85rem;
+}
+
+
+.leni_chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-bottom: 26px;
+}
+
+.leni_chip {
+  padding: 6px 20px;
+  border: 1.5px solid var(--rose);
+  border-radius: 99px;
+  background: #fff;
+  color: var(--rose);
+  font: 500 0.82rem Poppins, sans-serif;
+  cursor: pointer;
+  transition: 0.25s;
+}
+
+.leni_chip:hover,
+.leni_chip.leni_on {
+  background: var(--rose);
+  color: #fff;
+}
+
+.leni_article {
+  overflow: hidden;
+  border-radius: 24px;
+  background: #fff;
+  box-shadow: var(--shadow);
+  transition: 0.3s;
+}
+
+.leni_article:hover {
+  transform: translateY(-5px);
+}
+
+.leni_article div {
+  padding: 18px;
+}
+
+.leni_article p {
+  margin: 8px 0 12px;
+  font-size: 0.9rem;
+}
+
+.leni_feat {
+  grid-column: 1 / -1;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+}
+
+.leni_feat div {
+  padding: 34px;
+}
+
+.leni_feat h3 {
+  font-size: 2rem;
+}
+
+
+.leni_faq-item {
+  margin-bottom: 10px;
+  overflow: hidden;
+  border-radius: 16px;
+  background: #fff;
+  box-shadow: var(--shadow);
+}
+
+.leni_faq-q {
+  width: 100%;
+  padding: 14px 18px;
+  border: 0;
+  background: none;
+  color: inherit;
+  font: 500 0.92rem Poppins, sans-serif;
+  text-align: left;
+  cursor: pointer;
+}
+
+.leni_faq-q::after {
+  content: "+";
+  float: right;
+  color: var(--rose);
+  font-size: 1.3rem;
+  line-height: 1;
+}
+
+.leni_open .leni_faq-q::after {
+  content: "−";
+}
+
+.leni_faq-a {
+  max-height: 0;
+  padding: 0 18px;
+  overflow: hidden;
+  transition: 0.3s;
+}
+
+.leni_open .leni_faq-a {
+  max-height: 140px;
+  padding: 0 18px 14px;
+}
+
+
+#leni_veil {
+  position: fixed;
+  inset: 0;
+  z-index: 90;
+  background: rgba(81, 67, 63, 0.35);
+  opacity: 0;
+  pointer-events: none;
+  transition: 0.3s;
+}
+
+#leni_drawer {
+  position: fixed;
+  top: 0;
+  right: 0;
+  z-index: 100;
+  width: min(400px, 100%);
+  height: 100%;
+  padding: 20px;
+  overflow: auto;
+  background: var(--cream);
+  transform: translateX(100%);
+  transition: 0.35s;
+}
+
+.leni_show #leni_drawer {
+  transform: none;
+}
+
+.leni_show #leni_veil {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.leni_dhead {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.leni_dhead button {
+  width: 36px;
+  height: 36px;
+  border: 0;
+  border-radius: 50%;
+  background: var(--blush);
+  cursor: pointer;
+}
+
+.leni_item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin: 12px 0;
+  font-size: 0.85rem;
+}
+
+.leni_item .leni_ph {
+  flex: none;
+  width: 56px;
+  height: 60px;
+  aspect-ratio: auto;
+  border-radius: 12px;
+}
+
+.leni_item div {
+  flex: 1;
+}
+
+.leni_item button {
+  width: 26px;
+  height: 26px;
+  border: 0;
+  border-radius: 8px;
+  background: var(--mint);
+  cursor: pointer;
+}
+
+.leni_total {
+  margin: 14px 0;
+  padding-top: 12px;
+  border-top: 1px dashed var(--sage);
+  font-weight: 500;
+}
+
+#leni_footer {
+  padding: 48px 0 24px;
+  background: linear-gradient(135deg, #4A3A36, #352826);
+  color: #F5E9E2;
+}
+
+#leni_footer .leni_logo {
+  color: #F4A9BC;
+}
+
+#leni_footer h4 {
+  margin-bottom: 10px;
+  color: #F4A9BC;
+  font: 600 0.78rem Poppins, sans-serif;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+}
+
+#leni_footer a {
+  display: block;
+  font-size: 0.88rem;
+  text-decoration: none;
+  opacity: 0.85;
+}
+
+.leni_fcols {
+  display: grid;
+  grid-template-columns: 1.6fr 1fr 1fr 1fr;
+  gap: 30px;
+}
+
+.leni_copy {
+  margin-top: 28px;
+  font-size: 0.78rem;
+  text-align: center;
+  opacity: 0.7;
+}
+
+#leni_toast {
+  position: fixed;
+  bottom: 24px;
+  left: 50%;
+  z-index: 120;
+  padding: 12px 22px;
+  border-radius: 99px;
+  background: var(--brown);
+  color: #fff;
+  font-size: 0.88rem;
+  transform: translate(-50%, 90px);
+  transition: 0.35s;
+}
+
+#leni_toast.leni_show {
+  transform: translate(-50%, 0);
+}
+
+
+#leni_loader {
+  position: fixed;
+  inset: 0;
+  z-index: 300;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(135deg, #F6CAD5, #E4EFD6);
+  animation: leni_gone 0.7s ease 1.3s forwards;
+}
+
+#leni_loader span {
+  color: var(--rose);
+  font: 300 4rem 'Cormorant Garamond', serif;
+  letter-spacing: 0.3em;
+  animation: leni_pop 1s ease both;
+}
+
+#leni_loader small {
+  margin-top: 8px;
+  font-size: 0.7rem;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+}
+
+@keyframes leni_gone {
+  to {
+    opacity: 0;
+    visibility: hidden;
+  }
+}
+
+@keyframes leni_pop {
+  from {
+    opacity: 0;
+    transform: scale(0.9);
+  }
+}
+
+#leni_progress {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 200;
+  width: 0;
+  height: 4px;
+  background: linear-gradient(90deg, var(--rose), var(--sage));
+}
+
+#leni_top {
+  position: fixed;
+  right: 18px;
+  bottom: 22px;
+  z-index: 80;
+  width: 46px;
+  height: 46px;
+  border: 0;
+  border-radius: 50%;
+  background: var(--rose);
+  box-shadow: var(--shadow);
+  color: #fff;
+  font-size: 1.2rem;
+  cursor: pointer;
+  opacity: 0;
+  pointer-events: none;
+  transition: 0.3s;
+}
+
+#leni_top.leni_show {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+#leni_top:hover {
+  background: var(--brown);
+}
+
+.leni_quizbox {
+  margin-top: 22px;
+  padding: 30px;
+  text-align: center;
+}
+
+.leni_quizbox h3 {
+  margin: 6px 0 14px;
+  font-size: 1.7rem;
+}
+
+.leni_quizbox .leni_grid {
+  margin: 22px 0;
+  text-align: center;
+}
+
+.leni_qchips {
+  justify-content: center;
+  margin: 18px 0 6px;
+}
+
+
+.leni_rv {
+  opacity: 0;
+  transform: translateY(26px);
+  transition: opacity 0.7s ease, transform 0.7s ease;
+}
+
+.leni_rv.leni_in {
+  opacity: 1;
+  transform: none;
+}
+
+.leni_quizbox.leni_rv {
+  transition-delay: 0ms !important;
+}
+
+
+@media (min-width: 701px) {
+  .leni_navbar {
+    justify-content: center;
+    gap: 40px;
+    padding: 10px 0;
+    border-top: 1px solid rgba(212, 116, 140, 0.25);
+  }
+
+  .leni_navbar a {
+    font-size: 0.72rem;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+  }
+}
+
+@media (max-width: 900px) {
+  .leni_split {
+    grid-template-columns: 1fr;
+  }
+
+  .leni_cols,
+  .leni_c3,
+  .leni_tiles,
+  .leni_ugc,
+  .leni_fcols,
+  .leni_info {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .leni_feat {
+    grid-template-columns: 1fr;
+  }
+
+  .leni_b1 {
+    left: 0;
+  }
+
+  .leni_b2 {
+    right: 0;
+  }
+
+  .leni_frame {
+    padding: 26px;
+  }
+}
+
+@media (max-width: 700px) {
+  #leni_main > section {
+    scroll-margin-top: 76px;
+  }
+
+  .leni_burger {
+    display: block;
+  }
+
+  .leni_navbar {
+    position: absolute;
+    top: 72px;
+    right: 0;
+    left: 0;
+    flex-direction: column;
+    max-height: 0;
+    padding: 0 6%;
+    overflow: hidden;
+    background: var(--cream);
+    box-shadow: var(--shadow);
+    transition: 0.3s;
+  }
+
+  .leni_navbar.leni_open {
+    max-height: 420px;
+    padding: 14px 6%;
+  }
+
+  .leni_cols,
+  .leni_c3,
+  .leni_trust {
+    grid-template-columns: 1fr;
+  }
+
+  .leni_grid {
+    grid-template-columns: 1fr 1fr;
+    gap: 14px;
+  }
+
+  .leni_inline {
+    flex-direction: column;
+  }
+
+  .leni_stats {
+    gap: 18px;
+  }
+
+  .leni_tile {
+    min-height: 180px;
+  }
+
+  .leni_tile h3 {
+    font-size: 1.8rem;
+  }
+
+  .leni_thumb {
+    width: 64px;
+  }
+
+  .leni_panel {
+    padding: 22px;
+  }
+}
+
+
+@media (max-width: 380px) {
+  .leni_grid {
+    grid-template-columns: 1fr;
+  }
+}
